@@ -4,6 +4,8 @@ const todos = require('../../lib/todos');
 export default function handler(req, res) {
   console.log(req.body);
   todos.addTodo(req.body);
-  res.status(200).json(todos.listTodos());
-}
 
+  const todoslist = await todos.listTodos();
+  console.log(todoslist);
+  res.status(200).json(todoslist);
+}
