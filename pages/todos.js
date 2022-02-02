@@ -26,7 +26,7 @@ export default function Todos(props) {
         'Content-Type': 'application/json',
       },
     }).then(() => {
-      router.replace(router.asPath);
+      router?.replace(router?.asPath);
     });
   }
 
