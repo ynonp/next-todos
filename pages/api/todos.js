@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const todos = require('../../lib/todos');
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   console.log(req.body);
   todos.addTodo(req.body);
 
